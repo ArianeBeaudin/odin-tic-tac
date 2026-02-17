@@ -1,3 +1,6 @@
+// import func from "./module.js";
+// console.log(func());
+
 //AS LITTLE AS POSSIBLE GLOBAL VARIABLE AND ++ IFHE
 
 //Players (obj)
@@ -10,8 +13,21 @@ function createPlayer(pname, ptoken) {
   let victory_status = false;
   let just_played = false;
 
+  // name = 'asdf'
+  // const obj = {name:'asfd'}
+
+  // obj.asdf = name
+  // obj.name = 'autre'
   return { name, token, victory_status, just_played };
+  // return { name:pname, token, victory_status, just_played };
 }
+
+// exemple iife victor
+// const result = (function (a, b) {
+
+//   console.log(a,b)
+//   return 'allo'
+// })(1,2)
 
 function createGameEngine() {
   let board = [
