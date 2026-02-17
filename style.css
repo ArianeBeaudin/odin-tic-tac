@@ -1,3 +1,15 @@
 html {
   background-color: blue;
 }
+
+div {
+  margin: 10%;
+  border-color: darkblue;
+}
+
+#0c0,
+#0c1,
+#0c2 {
+  border-bottom: 10px;
+  border-color: brown;
+}
