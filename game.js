@@ -62,7 +62,7 @@ function createDisplayEngine(board, player) {
         visualBoard[x][y] = document.createElement("div");
         visualBoard[x][y].id = x + "c" + y;
         visualBoard[x][y].innerHTML = board[x][y];
-        visualBoard[x][y].style.backgroundColor = "pink";
+
         console.log(document.getElementById("board"));
         document.getElementById("board").appendChild(visualBoard[x][y]);
         y++;
@@ -71,11 +71,40 @@ function createDisplayEngine(board, player) {
     }
   }
 
+  // function checkBorders(x, y){
+  //     if (x < 2){
+  //         visualBoard[x][y].style.border-bottom = "10px";
+  //     }
+  // }
+
   function drawLines() {
-    document.getElementById("0c0").style.color = "red";
+    //visualBoard[x][y].style.backgroundColor = "pink";
+    console.log(visualBoard[0][0]);
+    let x = 0;
+
+    while (x < 3) {
+      let y = 0;
+
+      //
+      visualBoard[x][y].style.color = "pink";
+      visualBoard[x][y].style.borderBottomColor = "pink";
+      visualBoard[x][y].style.border = "solid pink 10px";
+      while (y < 3) {
+        if (y < 2) {
+          document.getElementById(x + "c" + y).style.borderBottomColor =
+            "darkblue";
+          document.getElementById(x + "c" + y).style.borderBottomWidth = "20px";
+
+          // visualBoard[x][y].style.border-left = "10px";
+        }
+        y++;
+      }
+      x++;
+    }
   }
 
   initiateBoard();
+  drawLines();
 }
 
 //MAIN

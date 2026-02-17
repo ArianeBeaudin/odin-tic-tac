@@ -7,9 +7,9 @@ div {
   border-color: darkblue;
 }
 
-#0c0,
-#0c1,
-#0c2 {
+div#0c0,
+div#0c1,
+div#0c2 {
   border-bottom: 10px;
   border-color: brown;
 }
